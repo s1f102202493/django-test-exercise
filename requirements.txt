@@ -1,1 +1,6 @@
 Django==4.2.2
+whitemoise
+guicorn
+psycopg2-binary
+dj-database-url
+pytz
