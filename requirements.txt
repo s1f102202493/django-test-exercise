@@ -1,6 +1,6 @@
 Django==4.2.2
 whitenoise
-guicorn
+gunicorn
 psycopg2-binary
 dj-database-url
 pytz
