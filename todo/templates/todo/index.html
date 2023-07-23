@@ -39,6 +39,8 @@
     {% for task in tasks %}
     <div class="text">
       <h2><a href="{% url 'detail' task.id %}">{{ task.title }}</a></h2>
+      <details>
+        <summary>詳細を表示</summary>
       <ul>
         {% if task.comment %}
         <li>Comment: {{ task.comment }}</li>
@@ -55,6 +57,7 @@
         <li>Status: Not Completed</li>
         {% endif %}
       </ul>
+    </details>
     </div>
     {% endfor %}
   </body>
