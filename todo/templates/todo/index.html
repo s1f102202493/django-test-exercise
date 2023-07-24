@@ -6,6 +6,7 @@
     <title>To Do Application</title>
     <meta charset="UTF-8">
     <meta name="author" content="INIAD">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
 
   <body>
@@ -36,30 +37,33 @@
       <a href="{% url 'index' %}?order=post">Sort by Posted Date</a>
     </div>
 
-    {% for task in tasks %}
-    <div class="text">
-      <h2><a href="{% url 'detail' task.id %}">{{ task.title }}</a></h2>
-      <details>
-        <summary>詳細を表示</summary>
-      <ul>
-        {% if task.comment %}
-        <li>Comment: {{ task.comment }}</li>
-        {% else %}
-        <li>Comment: No Comment</li>
-        {% endif %}
-        <li>Posted at: {{ task.posted_at }}</li>
-        {% if task.due_at %} 
-        <li>Due at: {{ task.due_at }}</li>
-        {% endif %}
-        {% if task.completed %} 
-        <li>Status: Completed</li>
-        {% else %}
-        <li>Status: Not Completed</li>
-        {% endif %}
-      </ul>
-    </details>
+    <div class="row">
+      {% for task in tasks %}
+      <div class="col-6 text">
+        <h2><a href="{% url 'detail' task.id %}">{{ task.title }}</a></h2>
+        <details>
+          <summary>詳細を表示</summary>
+        <ul>
+          {% if task.comment %}
+          <li>Comment: {{ task.comment }}</li>
+          {% else %}
+          <li>Comment: No Comment</li>
+          {% endif %}
+          <li>Posted at: {{ task.posted_at }}</li>
+          {% if task.due_at %} 
+          <li>Due at: {{ task.due_at }}</li>
+          {% endif %}
+          {% if task.completed %} 
+          <li>Status: Completed</li>
+          {% else %}
+          <li>Status: Not Completed</li>
+          {% endif %}
+        </ul>
+        </details>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim" crossorigin="anonymous"></script>
   </body>
 
 </html>
