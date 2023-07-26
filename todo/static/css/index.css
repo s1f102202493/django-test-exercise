@@ -41,7 +41,7 @@ html, body, h1, ul, li {
   }
   
   li:last-child {
-    color: #28a745; /* Green color for completed tasks */
+    color: #28a745; 
   }
   
   a {
