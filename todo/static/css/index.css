@@ -1,0 +1,88 @@
+html, body, h1, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #1765b9;
+    border-bottom:  4px solid #91969b;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  ul li {
+    display: flex;
+    align-items: center;
+  }
+  
+  ul li:before {
+    content: "\2022"; 
+    color: #1765b9;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  li:last-child {
+    color: #28a745; 
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: #0056b3;
+  }
+  
+  div {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  div a {
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #1765b9;
+    color: #faf8f8;
+  }
+  
+  div a:hover {
+    background-color: #91969b;
+  }
+  
+  p {
+    text-align: center;
+  }
+
+  div.text {
+    background-color:#007bff;
+    max-width: 350px; 
+    margin: 0 auto; 
+    margin-top: 40px;
+    padding: 15px;
+    padding-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #dfdbdb;
+  }
