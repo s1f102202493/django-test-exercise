@@ -12,6 +12,11 @@
   <body>
     <h1>{{ task.title }}</h1>
     <ul>
+      {% if task.comment %}
+      <li>Comment: {{ task.comment }}</li>
+      {% else %}
+      <li>Comment: No Comment</li>
+      {% endif %}
       <li>Posted at: {{ task.posted_at }}</li>
       {% if task.due_at %}
       <li>Due at: {{ task.due_at }}</li>
@@ -25,8 +30,10 @@
 
     <div>
       <a href="{% url 'index' %}">Top</a>
-      | <a href="{% url 'update' task.id %}">Edit</a>
-      | <a href="{% url 'delete' task.id %}">Delete</a>
+
+      <a href="{% url 'close' task.id %}">Close</a>
+      <a href="{% url 'update' task.id %}">Edit</a>
+      <a href="{% url 'delete' task.id %}">Delete</a>
     </div>
   </body>
 
